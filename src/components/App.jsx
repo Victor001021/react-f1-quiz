@@ -126,7 +126,7 @@ export default function App() {
   console.log(questionsList);
 
   useEffect(function () {
-    fetch("/questions-f1.json")
+    fetch(`${import.meta.env.BASE_URL}questions-f1.json`)
       .then((res) => res.json())
       .then((data) =>
         dispatch({
