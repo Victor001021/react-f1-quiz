@@ -1,0 +1,261 @@
+{
+  "questions": [
+    {
+      "question": "Quem possui o maior número de títulos mundiais de pilotos na Fórmula 1?",
+      "options": [
+        "Ayrton Senna",
+        "Lewis Hamilton",
+        "Sebastian Vettel",
+        "Alain Prost"
+      ],
+      "correctOption": 1,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Qual piloto é conhecido pelo apelido 'The Flying Finn' (O Finlandês Voador)?",
+      "options": [
+        "Kimi Räikkönen",
+        "Max Verstappen",
+        "Fernando Alonso",
+        "Michael Schumacher"
+      ],
+      "correctOption": 0,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Por qual equipe Michael Schumacher conquistou cinco campeonatos consecutivos entre 2000 e 2004?",
+      "options": ["McLaren", "Williams", "Ferrari", "Benetton"],
+      "correctOption": 2,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "O que significa DRS na Fórmula 1?",
+      "options": [
+        "Sistema de Redução de Arrasto",
+        "Sistema de Corrida do Piloto",
+        "Configuração Dinâmica de Corrida",
+        "Sistema de Redução de Downforce"
+      ],
+      "correctOption": 0,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Qual circuito é conhecido como o 'Templo da Velocidade'?",
+      "options": ["Mônaco", "Monza", "Silverstone", "Spa-Francorchamps"],
+      "correctOption": 1,
+      "points": 20,
+      "difficulty": "medium"
+    },
+    {
+      "question": "Qual país sedia o Grande Prêmio de Mônaco?",
+      "options": ["França", "Itália", "Mônaco", "Espanha"],
+      "correctOption": 2,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Qual piloto conquistou o Campeonato Mundial de Fórmula 1 de 2021?",
+      "options": [
+        "Lewis Hamilton",
+        "Max Verstappen",
+        "Valtteri Bottas",
+        "Charles Leclerc"
+      ],
+      "correctOption": 1,
+      "points": 20,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Qual equipe possui o maior número de títulos mundiais de construtores na Fórmula 1?",
+      "options": ["McLaren", "Mercedes", "Red Bull Racing", "Ferrari"],
+      "correctOption": 3,
+      "points": 20,
+      "difficulty": "easy"
+    },
+    {
+      "question": "O que significa a bandeira vermelha durante uma sessão de Fórmula 1?",
+      "options": [
+        "A sessão foi interrompida",
+        "Há perigo na pista",
+        "Um piloto foi desclassificado",
+        "O safety car foi acionado"
+      ],
+      "correctOption": 0,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Qual piloto brasileiro conquistou os títulos mundiais de 1988, 1990 e 1991?",
+      "options": [
+        "Ayrton Senna",
+        "Nelson Piquet",
+        "Emerson Fittipaldi",
+        "Felipe Massa"
+      ],
+      "correctOption": 0,
+      "points": 20,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Qual circuito recebe o Grande Prêmio da Grã-Bretanha?",
+      "options": ["Silverstone", "Brands Hatch", "Donington Park", "Goodwood"],
+      "correctOption": 0,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Qual é o principal significado da bandeira amarela?",
+      "options": [
+        "A corrida terminou",
+        "Há perigo na pista",
+        "Um piloto foi desclassificado",
+        "O safety car é obrigatório"
+      ],
+      "correctOption": 1,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Qual piloto possui o recorde de maior número de vitórias em corridas de Fórmula 1?",
+      "options": [
+        "Michael Schumacher",
+        "Lewis Hamilton",
+        "Max Verstappen",
+        "Sebastian Vettel"
+      ],
+      "correctOption": 1,
+      "points": 30,
+      "difficulty": "medium"
+    },
+    {
+      "question": "Qual circuito é famoso pela sequência de curvas Eau Rouge e Raidillon?",
+      "options": ["Spa-Francorchamps", "Suzuka", "Interlagos", "Zandvoort"],
+      "correctOption": 0,
+      "points": 20,
+      "difficulty": "medium"
+    },
+    {
+      "question": "Qual piloto foi campeão mundial de Fórmula 1 em 2005 e 2006?",
+      "options": [
+        "Fernando Alonso",
+        "Kimi Räikkönen",
+        "Michael Schumacher",
+        "Jenson Button"
+      ],
+      "correctOption": 0,
+      "points": 20,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Qual equipe ficou conhecida durante muitos anos pelo carro vermelho e pelo símbolo do cavalo empinado?",
+      "options": ["Ferrari", "McLaren", "Lotus", "Williams"],
+      "correctOption": 0,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Qual circuito é conhecido por ser um dos mais desafiadores do calendário devido às suas curvas de alta velocidade e mudanças de elevação?",
+      "options": ["Spa-Francorchamps", "Mônaco", "Monza", "Miami"],
+      "correctOption": 0,
+      "points": 20,
+      "difficulty": "medium"
+    },
+    {
+      "question": "Qual piloto brasileiro foi campeão mundial de Fórmula 1 em 1972 e 1974?",
+      "options": [
+        "Ayrton Senna",
+        "Nelson Piquet",
+        "Emerson Fittipaldi",
+        "Rubens Barrichello"
+      ],
+      "correctOption": 2,
+      "points": 20,
+      "difficulty": "medium"
+    },
+    {
+      "question": "O que acontece quando um piloto recebe uma bandeira azul?",
+      "options": [
+        "Ele deve entrar nos boxes imediatamente",
+        "Ele deve permitir a passagem de um piloto mais rápido",
+        "A corrida será interrompida",
+        "Ele recebeu uma punição"
+      ],
+      "correctOption": 1,
+      "points": 20,
+      "difficulty": "medium"
+    },
+    {
+      "question": "Qual piloto ficou famoso por usar o número 46 durante grande parte de sua carreira?",
+      "options": [
+        "Valtteri Bottas",
+        "Lando Norris",
+        "Max Verstappen",
+        "Nenhuma das opções"
+      ],
+      "correctOption": 3,
+      "points": 30,
+      "difficulty": "hard"
+    },
+    {
+      "question": "Em qual circuito é realizado o Grande Prêmio do Brasil?",
+      "options": ["Jacarepaguá", "Interlagos", "Brasília", "Curitiba"],
+      "correctOption": 1,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Qual piloto conquistou sete títulos mundiais antes de Lewis Hamilton igualar essa marca?",
+      "options": [
+        "Ayrton Senna",
+        "Alain Prost",
+        "Michael Schumacher",
+        "Sebastian Vettel"
+      ],
+      "correctOption": 2,
+      "points": 20,
+      "difficulty": "easy"
+    },
+    {
+      "question": "O que representa a pole position?",
+      "options": [
+        "A volta mais rápida da corrida",
+        "A primeira posição no grid de largada",
+        "A posição do piloto com mais pontos",
+        "A última posição do grid"
+      ],
+      "correctOption": 1,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Qual desses pilotos nunca foi campeão mundial de Fórmula 1?",
+      "options": [
+        "Fernando Alonso",
+        "Sebastian Vettel",
+        "Charles Leclerc",
+        "Kimi Räikkönen"
+      ],
+      "correctOption": 2,
+      "points": 30,
+      "difficulty": "medium"
+    },
+    {
+      "question": "Qual circuito de rua é famoso por suas barreiras muito próximas e por ser um dos mais difíceis para ultrapassar?",
+      "options": ["Monza", "Mônaco", "Silverstone", "Spa-Francorchamps"],
+      "correctOption": 1,
+      "points": 20,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Qual é o nome dado à volta mais rápida registrada durante uma corrida?",
+      "options": ["Pole lap", "Fast lap", "Fastest lap", "Hot lap"],
+      "correctOption": 2,
+      "points": 10,
+      "difficulty": "easy"
+    }
+  ]
+}
