@@ -1,10 +1,9 @@
-function StartScreen({
-  numQuestions,
-  dispatch,
-  difficulty,
-  setDifficulty,
-  questionsList,
-}) {
+import { useQuestions } from "../context/QuestionsContext";
+
+function StartScreen() {
+  const { dispatch, questionsList, numQuestions, difficulty, setDifficulty } =
+    useQuestions();
+
   function handleDifficulty(e) {
     setDifficulty(e.target.value);
     console.log(questionsList);
@@ -14,7 +13,10 @@ function StartScreen({
     <div className="start">
       <h2>Bem vindo ao quiz da F1!</h2>
 
-      <h3>{numQuestions} questões para testar o seu conhecimento em F1</h3>
+      <h3>
+        {numQuestions} {numQuestions > 1 ? "questões" : "questão"} para testar o
+        seu conhecimento em F1
+      </h3>
       <footer>
         <select value={difficulty} onChange={(e) => handleDifficulty(e)}>
           <option value="all">Todas</option>
