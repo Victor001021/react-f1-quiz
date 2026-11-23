@@ -5,6 +5,7 @@ import {
   useReducer,
   useState,
 } from "react";
+import { useQuestionsSupabase } from "../hooks/useQuestionsSupabase";
 
 const initialState = {
   questions: [],
@@ -109,17 +110,28 @@ function QuestionProvider({ children }) {
     dispatch,
   ] = useReducer(reducer, initialState);
 
-  useEffect(function () {
-    fetch(`${import.meta.env.BASE_URL}questions-f1.json`)
-      .then((res) => res.json())
-      .then((data) =>
-        dispatch({
-          type: "dataReceived",
-          payload: data.questions,
-        }),
-      )
-      .catch(() => dispatch({ type: "dataFailed" }));
-  }, []);
+  const { data, isPending } = useQuestionsSupabase();
+
+  useEffect(
+    function () {
+      if (data) {
+        dispatch({ type: "dataReceived", payload: data });
+      }
+    },
+    [data],
+  );
+
+  // useEffect(function () {
+  //   fetch(`${import.meta.env.BASE_URL}questions-f1.json`)
+  //     .then((res) => res.json())
+  //     .then((data) =>
+  //       dispatch({
+  //         type: "dataReceived",
+  //         payload: data.questions,
+  //       }),
+  //     )
+  //     .catch(() => dispatch({ type: "dataFailed" }));
+  // }, []);
 
   const [difficulty, setDifficulty] = useState("all");
 

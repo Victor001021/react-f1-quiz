@@ -19,7 +19,7 @@ function StartScreen() {
       </h3>
       <footer>
         <select value={difficulty} onChange={(e) => handleDifficulty(e)}>
-          <option value="all">Todas</option>
+          <option value="all">Todas as dificuldades</option>
           <option value="easy">Fácil</option>
           <option value="medium">Médio</option>
           <option value="hard">Difícil</option>

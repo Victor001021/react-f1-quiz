@@ -9,7 +9,7 @@ import NextButton from "./NextButton";
 import Progress from "./Progress";
 import FinishScreen from "./FinishScreen";
 import Timer from "./Timer";
-import { QuestionProvider, useQuestions } from "../context/QuestionsContext";
+import { useQuestions } from "../context/QuestionsContext";
 
 function Quiz() {
   const { status } = useQuestions();
@@ -40,9 +40,7 @@ export default function App() {
   return (
     <div className="app">
       <Header />
-      <QuestionProvider>
-        <Quiz />
-      </QuestionProvider>
+      <Quiz />
     </div>
   );
 }

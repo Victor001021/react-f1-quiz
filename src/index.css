@@ -1,8 +1,10 @@
 :root {
+  --color-black: #000000;
   --color-darkest: #343a40;
   --color-dark: #495057;
-  --color-medium: #ced4da;
+  --color-medium: #e8e9eb;
   --color-light: #f1f3f5;
+  --color-white: #ffffff;
 
   --color-theme: #198754;
   --color-accent: #d40000;
@@ -26,7 +28,10 @@ html {
 body {
   min-height: 100vh;
   color: var(--color-light);
-  background-color: var(--color-darkest);
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("/f1-main.jpg");
+  background-size: cover;
   padding: 3.2rem;
 }
 
@@ -35,18 +40,46 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 
 .main {
   width: min(50rem, 100%);
 }
 
-.app-header {
+/* .app-header {
   width: min(66rem, 100%);
   margin-bottom: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
+} */
+
+.logo {
+  width: 70px; 
+  height: auto;
+  opacity: 0.6;
+  filter: brightness(0) invert(1); /* Força o logo a ficar branco se for colorido */
+}
+
+.app-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: start;
+  width: 100%;
+  padding: 1.5rem 2rem;
+}
+
+.app-header h1 {
+  text-align: center;
+
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+
+.header-spacer {
+  width: 70px; /* Deve ter a mesma largura aproximada do logo */
 }
 
 .error {
@@ -86,12 +119,20 @@ h4 {
 }
 
 .start {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.start h1,
+.start h2,
+.start h3 {
+  opacity: 0.8;
+}
+
 .progress {
+  margin-top: 4rem;
   margin-bottom: 4rem;
   display: grid;
   justify-content: space-between;
@@ -123,16 +164,19 @@ progress {
   font-family: inherit;
   color: inherit;
   font-size: 2rem;
-  border: 2px solid var(--color-dark);
-  background-color: var(--color-dark);
+  border: 2px solid var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-black);
   padding: 1.2rem 2.4rem;
   cursor: pointer;
   border-radius: 100px;
+  white-space: nowrap;
+  flex-shrink: 0;
   transition: 0.3s;
 }
 
 .btn:not([disabled]):hover {
-  background-color: var(--color-darkest);
+  background-color: var(--color-medium);
 }
 
 .btn-option:not([disabled]):hover {
@@ -158,6 +202,17 @@ progress {
 .btn-option {
   width: 100%;
   text-align: left;
+  background-color: rgba(20, 24, 34, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--color-light);
+}
+
+.btn-option:not([disabled]):hover {
+  background-color: rgba(35, 42, 58, 0.85);
+  border-color: rgba(255, 255, 255, 0.7);
+  transform: translateX(1.2rem);
 }
 
 .btn-option.correct {
@@ -174,6 +229,10 @@ progress {
 
 .answer {
   transform: translateX(2rem);
+}
+
+.text-block {
+  margin-bottom: 1rem;
 }
 
 .result {
@@ -212,32 +271,51 @@ progress {
 select {
   font-family: inherit;
   color: inherit;
-  font-size: 2rem;
-  border: 2px solid var(--color-dark);
-  background-color: var(--color-dark);
+  font-size: 1.7rem;
+  border: 2px solid var(--color-white);
+  background-color: rgba(126, 126, 126, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 1.2rem 2.4rem;
   cursor: pointer;
   border-radius: 100px;
   transition: 0.3s;
 }
 
+select:hover {
+  border-color: var(--color-medium);
+}
+
+option {
+  color: var(--color-black);
+}
+
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .timer {
   font-size: 1.8rem;
   color: var(--color-medium);
-  border: 2px solid var(--color-dark);
+  font-variant-numeric: tabular-nums;
+  background-color: rgba(15, 18, 25, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   padding: 1.35rem 2.8rem;
   border-radius: 100px;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
-.red {
-  border-color: red;
+.timer.red {
+  background-color: rgba(212, 0, 0, 0.35);
+  border-color: rgba(255, 60, 60, 0.85);
+  color: var(--color-white);
   animation: blink 1s infinite;
 }
 
@@ -248,7 +326,7 @@ footer {
   }
 
   50% {
-    opacity: 0.3;
+    opacity: 0.6;
   }
 }
 
@@ -357,7 +435,7 @@ footer {
   }
 
   select {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     padding: 1rem 1.8rem;
   }
 

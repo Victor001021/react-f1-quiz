@@ -9,10 +9,13 @@ function FinishScreen() {
     setDifficulty("all");
     dispatch({ type: "restart" });
   }
+
   return (
     <>
       <p className="result">
-        Sua pontuação foi {points} de {sumMaxPoints} ({Math.ceil(percentage)}%)
+        {percentage
+          ? `Sua pontuação foi ${points} de ${sumMaxPoints} (${Math.ceil(percentage)})%`
+          : `Sua pontuação foi ${points}`}
       </p>
       <p className="highscore">(Recorde: {highscore} pontos)</p>
       <button className="btn btn-ui" onClick={handleRestart}>
