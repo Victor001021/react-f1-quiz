@@ -1,13 +1,34 @@
+import { useQueryClient } from "@tanstack/react-query";
 import { useQuestions } from "../context/QuestionsContext";
+import { useNavigate } from "react-router-dom";
 
 function StartScreen() {
-  const { dispatch, questionsList, numQuestions, difficulty, setDifficulty } =
+  const { dispatch, questions, numQuestions, difficulty, setDifficulty } =
     useQuestions();
+
+  const navigate = useNavigate();
 
   function handleDifficulty(e) {
     setDifficulty(e.target.value);
-    console.log(questionsList);
   }
+
+  function handleStart() {
+    let questionsList = queryClient.getQueryData(["questions", difficulty]);
+
+    if (!questionsList) {
+      questionsList =
+        difficulty === "all"
+          ? questions
+          : questions.filter((q) => q.difficulty === difficulty);
+    }
+
+    if (!questionsList.length) return;
+
+    dispatch({ type: "start", payload: questionsList });
+    navigate("/quiz");
+  }
+
+  const queryClient = useQueryClient();
 
   return (
     <div className="start">
@@ -24,10 +45,7 @@ function StartScreen() {
           <option value="medium">Médio</option>
           <option value="hard">Difícil</option>
         </select>
-        <button
-          className="btn btn-ui"
-          onClick={() => dispatch({ type: "start", payload: questionsList })}
-        >
+        <button className="btn btn-ui" onClick={() => handleStart()}>
           Vamos começar!
         </button>
       </footer>

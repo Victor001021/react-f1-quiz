@@ -6,6 +6,7 @@ import {
   useState,
 } from "react";
 import { useQuestionsSupabase } from "../hooks/useQuestionsSupabase";
+import { useQueryClient } from "@tanstack/react-query";
 
 const initialState = {
   questions: [],
@@ -110,7 +111,9 @@ function QuestionProvider({ children }) {
     dispatch,
   ] = useReducer(reducer, initialState);
 
-  const { data, isPending } = useQuestionsSupabase();
+  const queryClient = useQueryClient();
+
+  const { data } = useQuestionsSupabase();
 
   useEffect(
     function () {
@@ -121,18 +124,6 @@ function QuestionProvider({ children }) {
     [data],
   );
 
-  // useEffect(function () {
-  //   fetch(`${import.meta.env.BASE_URL}questions-f1.json`)
-  //     .then((res) => res.json())
-  //     .then((data) =>
-  //       dispatch({
-  //         type: "dataReceived",
-  //         payload: data.questions,
-  //       }),
-  //     )
-  //     .catch(() => dispatch({ type: "dataFailed" }));
-  // }, []);
-
   const [difficulty, setDifficulty] = useState("all");
 
   let questionsList;
@@ -141,6 +132,17 @@ function QuestionProvider({ children }) {
       ? questions.slice()
       : questions.slice().filter((q) => q.difficulty === difficulty);
   const numQuestions = questionsList.length;
+
+  useEffect(() => {
+    if (!questions.length) return;
+
+    const filteredQuestions =
+      difficulty === "all"
+        ? questions
+        : questions.filter((q) => q.difficulty === difficulty);
+
+    queryClient.setQueryData(["questions", difficulty], filteredQuestions);
+  }, [questions, difficulty, queryClient]);
 
   return (
     <QuestionsContext.Provider
@@ -157,7 +159,6 @@ function QuestionProvider({ children }) {
         numQuestions,
         difficulty,
         setDifficulty,
-        questionsList,
       }}
     >
       {children}

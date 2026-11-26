@@ -1,8 +1,8 @@
-export default function Loader() {
+export default function Loader({ label }) {
   return (
     <div className="loader-container">
       <div className="loader"></div>
-      <p>Carregando questões...</p>
+      <p>Carregando {label}...</p>
     </div>
   );
 }
